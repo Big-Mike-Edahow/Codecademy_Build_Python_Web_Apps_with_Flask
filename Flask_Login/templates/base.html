@@ -1,0 +1,30 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Codecademy Flask-Login! 🖥️</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About 🛈</a>
+            <a href="{{ url_for('logout') }}">Logout 🖱️</a>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+
+</html>
+

@@ -1,10 +1,16 @@
 <!-- recipe.html -->
 
-{% extends "base.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>{{ template_recipe | title }}</h1>
 <h4>{{ template_type }}</h4>
 {% if template_description %}
-<p>{{ template_description }}</p>
+<p>{{ template_description}}</p>
 {%else%}
 <p>A {{ template_recipe }} recipe.</p>
 {% endif %}
@@ -35,4 +41,5 @@
   <p>{{ template_form.comment.label }} {{ template_form.comment(size=48) }}</p>
   <p>{{ template_form.submit() }}</p>
 </form>
+
 {% endblock %}

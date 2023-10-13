@@ -1,0 +1,39 @@
+<!-- landing_page.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+{% block title %} Dinner Party Guests {% endblock %}
+
+{% block content %}
+
+<main>
+    <div>
+        <h1>Dinner Party Guests</h1>
+        <hr><br>
+    </div>
+    <div class="guest">
+        {% if current_user.is_authenticated %}
+        <strong>Hi {{ current_user.username }}! 👋</strong>
+        {% endif %}
+        {% if current_users|length == 0 %}
+        <p style="color:blue;"> Ooops. There are no users currently in your database. Make sure to add them first. </p>
+        {% endif %}
+        <ul>
+            {% for user in current_users %}
+            <li>{{ user.email }}</li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div>
+        <br>
+        <h3><a class="add-guest" href="{{ url_for('sign_up') }}">Add Guests 🪶</a></h3>
+        <h3><a class="add-guest" href="{{ url_for('login_page') }}">Login 🖥️</a></h3>
+    </div>
+</main>
+
+{% endblock %}
+
+</html>

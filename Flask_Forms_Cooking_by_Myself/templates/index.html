@@ -1,10 +1,19 @@
 <!-- index.html -->
 
-{% extends "base.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>Cooking By Myself</h1>
 <p>Welcome to my cookbook. These are recipes I like.</p>
+
 {% for id, name in template_recipes.items() %}
+
 <p><a href="{{ url_for('recipe', id=id) }}">{{ name }}</a></p>
+
 {% endfor %}
 
 <form action="/" method="POST">
@@ -23,4 +32,6 @@
   </p>
   <p>{{ template_form.submit() }}</p>
 </form>
+
 {% endblock %}
+

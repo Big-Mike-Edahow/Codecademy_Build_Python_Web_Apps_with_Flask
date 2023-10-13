@@ -1,0 +1,47 @@
+<!-- logged_in.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+{% block title %} {{current_user.username}} Home {% endblock %}
+
+{% block content %}
+
+<main>
+    <section>
+        <h1 class="center">The Ultimate Pancake! 🥞</h1>
+        <div class="container">
+            <article>
+                <figure>
+                    <img src="{{ url_for('static', filename='images/Pancakes.jpg')}}" alt="Pancakes" width="300px">
+                    <figcaption>Yummy blueberry pancakes! 🥞</figcaption>
+                </figure>
+            </article>
+            <article>
+                <p>3 avacados - peeled, pitted, and mashed
+                    1 lime, juiced
+                    1 teaspoon salt
+                    1/2 cup diced onion
+                    3 tablespoons chopped fresh cilantro
+                    2 roma (plum) tomatoes, diced
+                    1 teaspoon minced garlic
+                    1 pinch ground cayenne pepper
+                </p>
+                <br>
+                <li>In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center
+                    and
+                    pour in the milk, egg and melted butter; mix until smooth.</li>
+                <br>
+                <li>Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the
+                    griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.</li>
+            </article>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
+
+</html>
+

@@ -1,0 +1,41 @@
+<!-- base.html -->
+
+<html>
+    <head>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+ 
+        {% if title %}
+        <title>{{ title }} - TriPlanned</title>
+        {% else %}
+        <title>Welcome to TriPlanned</title>
+        {% endif %}
+    </head>
+    <body>
+           <div>
+      <center><h3 class="blue">TriPlanned</h3><center>
+      <center class="glow">&#127796;</center>
+      <a class="blue pull-left" href="{{ url_for('index') }}">Home</a>
+      {% if current_user.is_anonymous %}
+      <a class="blue pull-right" href="{{ url_for('login') }}">Login</a>
+      {% else %}
+      <a class="blue pull-right" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+      <a class="blue pull-left" href="{{ url_for('logout') }}">Logout</a>
+      {% endif %}
+    </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+ 
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

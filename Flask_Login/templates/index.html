@@ -1,0 +1,46 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="center">
+        <h2>Please enter your login credentials: 🖊️</h2>
+        <br>
+        <figure>
+            <img src="{{ url_for('static', filename='images/Computer.jpg') }}" alt="Computer" width="200px">
+        </figure>
+    </div>
+    <div class="center">
+        <br>
+        {% with msg = get_flashed_messages() %}
+        {% if msg %}
+        {% for message in msg %}
+        <h3 class="alert center"><strong>{{ message }}</strong></h3>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <br>
+    </div>
+    <div class="center">
+        <form action="/login" method="POST">
+            <label for="username">Username: </label>
+            <input type="text" name="username" placeholder="username">
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" placeholder="password">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+
+{% endblock %}
+
+</html>

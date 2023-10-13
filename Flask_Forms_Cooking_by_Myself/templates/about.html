@@ -1,7 +1,19 @@
 <!-- about.html -->
 
-{% extends "base.html" %} {% block content %}
-<h1>About Myself</h1>
-<p>I like to cook, save recipes and share them with you.</p>
-<p>Thank you for visiting!!!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <h1>About Big Mike</h1>
+    <figure>
+        <img src="{{ url_for('static', filename='images/Big_Mike.jpg') }}" alt="Big Mike" width="320px">
+    </figure>
+    <figcaption>Big Mike</figcaption>
+    <p>I like to cook, save recipes and share them with you.</p>
+    <p>Thank you for visiting!!!</p>
+</section>
 {% endblock %}

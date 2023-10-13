@@ -1,4 +1,5 @@
 # app.py
+# Flask Forms Cooking by Myself
 
 from flask import Flask, render_template, request
 from helper import recipes, types, descriptions, ingredients, instructions, add_ingredients, add_instructions, comments
@@ -30,7 +31,10 @@ def recipe(id):
     comments[id].append(new_comment)
   return render_template("recipe.html", template_recipe=recipes[id], template_type=types[id], template_description=descriptions[id], template_ingredients=ingredients[id], template_instructions=instructions[id], template_comments=comments[id], template_form=comment_form)
 
-@app.route("/about")
+@app.route("/about/")
 def about():
   return render_template("about.html")
   
+if __name__ == '__main__':
+  app.run(debug=True)
+

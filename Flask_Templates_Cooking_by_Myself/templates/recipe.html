@@ -1,6 +1,12 @@
 <!-- recipe.html -->
 
-{% extends "base.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>{{ template_recipe | title }}</h1>
 
 {% if template_description %}
@@ -22,4 +28,5 @@
   <li>{{ instruction }}</li>
   {% endfor %}
 </ul>
+
 {% endblock %}

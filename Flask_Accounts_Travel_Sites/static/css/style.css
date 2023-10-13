@@ -1,0 +1,21 @@
+/* style.css */
+
+body {
+    background-color: #E8DCD9;
+    font-family: cursive;
+  }
+   
+  .blue{
+      color:#187bcd
+  }
+   
+  .glow {
+    font-size: 30px;
+    color: blue;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+   
+ 
