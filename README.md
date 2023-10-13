@@ -1,5 +1,5 @@
-# Codecademy_Flask_Fundamentals
-Source Code from My Codecademy Flask Fundamentals Course
+# Codecademy_Build_Python_Web_Apps_with_Flask
+Source Code from My Codecademy Build Python Web Apps with Flask Skill Path
 
 In order to deliver the front-end of a website or web application to a user,
 a lot needs to happen behind the scenes on the back-end! Understanding what
